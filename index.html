@@ -13,23 +13,74 @@
     </head>
     <body>
         <!-- Navigation bar -->
-        <nav>
-            <div class="navbar">
-                <div><a href="#">Link1</a></div>
-                <div><a href="#">Link2</a></div>
-                <div><a href="#">Link3</a></div>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="myNav navbar-header">
+                    <a class="navbar-brand" href="#">Portfolio</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li>
+                        <span class="myNav glyphicon glyphicon-globe">
+                            <a href="#"></a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="myNav glyphicon glyphicon-envelope">
+                            <a href="#"></a>
+                        </span>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><span class="myNav glyphicon glyphicon-user"><a href="#"></a></span></li>
+                    <li><span class="myNav glyphicon glyphicon-log-in"><a href="#"></a></span></li>
+                </ul>
             </div>
+            <div class="container-fluid handle" style="color: white">Menu</div>
         </nav>
 
         <!-- Main content -->
         <!--                -->
 
         <!-- Left sections -->
-        <div class="left col-md-3">
+        <div class="col-md-3">
             <!-- My Profile -->
             <div class="row">
                 <div class="block" id="myProfile">
-                    <!-- <img id="profileImg" src="demo.jpg" alt="demo"> -->
+                    <!-- Name -->
+                    <h3 class="profileHeadline">Giang Vu</h3>
+
+                    <!-- Rounded, centered Profile Picture -->
+                    <img id="profileImg" src="demo-profile-picture.png" alt="demo">
+                    <br/>
+
+                    <!-- Job Title -->
+                    <h4 class="profileHeadline">Web Developer</h4>
+
+                    <!-- A nice separating horizontal line -->
+                    <hr style="width: 90%"/>
+                    <!--                -->
+                    
+                    <div id="personalInfo">
+                        <!-- Linkedin -->
+                        <div class="info">
+                            <span class="glyphicon glyphicon-link"></span>
+                            <a id="extLink" href="https://www.linkedin.com/in/giangvdm15">
+                                linkedin.com/in/giangvdm15
+                            </a>
+                        </div>
+
+                        <!-- Address -->
+                        <div class="info">
+                            <span class="glyphicon glyphicon-home"></span>
+                            <span>Hanoi, Vietnam</span>
+                        </div>
+
+                        <!-- Birth date -->
+                        <div class="info">
+                            <span class="glyphicon glyphicon-gift"></span>
+                            <span>Jan 5<sup>th</sup>, 1997</span>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -40,20 +91,31 @@
         </div>
 
         <!-- Center sections -->
-        <div class="center col-md-7">
+        <div class="col-md-7">
             <!-- Section for user to post status -->
             <div class="row">
-                <div class="block" id="status"></div>
+                <div class="block" id="formPost">
+                    <h4>Post something here:</h4>
+                    <form>
+                        <input id="someText" type="text" placeholder="Hello, World!" onkeyup="checkEmpty(this)">
+                        <button type="button" class="btn" id="postBtn" disabled>
+                            <span class="glyphicon glyphicon-pencil"></span> Post
+                        </button>
+                        <button type="reset" class="btn" id="resetBtn" onclick="disableButtonsUponReset()">
+                            <span class="glyphicon glyphicon-refresh"></span> Reset
+                        </button>
+                    </form>
+                </div>
             </div>
 
             <!-- Where posts are shown -->
             <div class="row">
-                <div class="block" id="post"></div>
+                <div class="block" id="feed"></div>
             </div>
         </div>
         
         <!-- Right sections -->
-        <div class="right col-md-2">
+        <div class="col-md-2">
             <div class="row">
                 <div class="block" id="news"></div>
             </div>
