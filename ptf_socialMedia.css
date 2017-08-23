@@ -1,14 +1,23 @@
-body{
+/* Global styling */
+body {
     background-color: #f4f4ef;
-    color: #20232a;
+    /* color: #20232a; */
 }
 
-html > *{
+* {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/*********************/
+
+
+/* Navbar styling */
 .navbar-inverse {
     background-color: #20232a;
+}
+
+.navbar-brand {
+    font-size: 22px;
 }
 
 li > *, .navbar-brand {
@@ -16,61 +25,104 @@ li > *, .navbar-brand {
 }
 
 /* Icons on Navbar */
-li > .glyphicon {
+.navIcon {
     padding: 15px 20px;
     font-size: 20px;
 }
 
-.navbar-brand {
-    padding-left: 30px !important;
-    padding-right: 30px !important;
+#menuLabel {
+    font-size: 20px;
 }
 
-li:hover, .myNav:hover, a.navbar-brand:hover {
+.navbar-brand {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+nav ul {
+    transition: 0.5s;
+}
+
+li:hover, span.myNav:hover {
     background-color: #ababce !important;
     color: #20232a !important;
     cursor: pointer !important;
 }
 
-.handle {
+.handler {
     width: 100%;
     box-sizing: border-box;
     cursor: pointer;
-    visibility: none;
-    padding: 15px 20px;
+    display: none;
+    padding: 10px 20px;
     background-color: black;
 }
 
-@media screen and (max-width: 768px) {
+a.navLabel {
+    color: white;
+    text-decoration: none;
+    display: none;
+}
+
+@media screen and (max-width: 767px) {
+    nav ul {
+        max-height: 0;
+        overflow: hidden;
+    }
+    .showing {
+        display: block;
+        max-height: 20em;
+    }
+    .navbar-header {
+        padding: 5px !important;
+    }
     .myNav {
         box-sizing: border-box;
         width: 100%;
         padding: 15px;
     }
-    .handle {
-        /* visibility: visible; */
+    .handler {
         display: block;
+    }
+    a.navLabel {
+        display: inline;
+    }
+    #myProfile {
+        margin-top: 110px !important;
     }
 }
 
-.row > .block{
-    margin-top: 20px;
+/*********************/
+
+
+/*Blocks styling */
+
+.block{
+    margin: 20px 10px 0;
     -webkit-box-shadow: 2px 2px 10px 2px rgba(184,182,184,1);
     -moz-box-shadow: 2px 2px 10px 2px rgba(184,182,184,1);
     box-shadow: 1px 1px 6px 1px rgba(184,182,184,1);
     background-color: white;
     padding: 5px 20px 20px 20px;
+    box-sizing: border-box;
 }
 
 /* First block of every column */
 .row:first-child {
-    margin-top: 60px !important;
+    margin-top: 50px !important;
 }
 
+.headline {
+    margin: 10px 0 20px;
+}
+
+/*********************/
+
+
+/*Now styling for each particular block */
+/*My Profile */
 #myProfile {
-    margin-left: 10px;
-    margin-right: 10px;
-    box-sizing: border-box;
+    color: #20232a;
 }
 
 img#profileImg {
@@ -87,7 +139,7 @@ img#profileImg {
 }
 
 a#extLink {
-    color: #20232a !important;
+    color: #20232a;
     text-decoration: none !important;
 }
 
@@ -102,20 +154,43 @@ div#personalInfo {
 }
 
 .info > .glyphicon {
-    padding-right: 15px !important;
+    padding-right: 15px ;
 }
 
-#interests {
-    margin-left: 10px;
-    margin-right: 10px;
-    height: 200px;
-    box-sizing: border-box;
+/***********/
+
+/*Interests */
+.interestItem {
+    padding: 3px 8px;
+    margin: 1px;
+    color: white;
 }
 
+.mostFav {
+    background-color: #a01d26;
+}
+
+.reallyFav {
+    background-color: #BA262E;
+}
+
+.okayFav {
+    background-color: #C93B42;
+}
+
+.kindaFav {
+    background-color: #DB646B;
+}
+
+.maybeFav {
+    background-color: #C2757A;
+}
+
+/***********/
+
+/*Post form */
 #formPost {
-    margin-left: 10px;
-    margin-right: 10px;
-    box-sizing: border-box;
+    color: #20232a;
 }
 
 input#someText {
@@ -142,21 +217,23 @@ input#someText {
     background-color: #a01d26;
 }
 
-/* .btn:hover {
-    background-color: #a01d26 !important;
-    color: inherit;
-} */
+/* or */
+/*#postBtn #resetBtn */
+.btn:hover {
+    background-color: #acacbe;
+    color: #20232a !important;
+}
+
+/***********/
+
+
 
 #feed {
-    margin-left: 10px;
-    margin-right: 10px;
     height: 400px;
     box-sizing: border-box;
 }
 
 #news {
-    margin-left: 10px;
-    margin-right: 10px;
     height: 300px;
     box-sizing: border-box;
 }

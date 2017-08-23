@@ -15,28 +15,48 @@
         <!-- Navigation bar -->
         <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="container-fluid">
+                <!-- Brand/Site name -->
                 <div class="myNav navbar-header">
-                    <a class="navbar-brand" href="#">Portfolio</a>
+                    <a class="navbar-brand" href="#">Giang Vu's Portfolio</a>
                 </div>
+                
+                <!-- Nav items-LETF -->
                 <ul class="nav navbar-nav">
                     <li>
-                        <span class="myNav glyphicon glyphicon-globe">
-                            <a href="#"></a>
+                        <span class="myNav glyphicon glyphicon-globe navIcon">
+                            <a href="#" class="navLabel">Explore</a>
                         </span>
                     </li>
                     <li>
-                        <span class="myNav glyphicon glyphicon-envelope">
-                            <a href="#"></a>
+                        <span class="myNav glyphicon glyphicon-envelope navIcon">
+                            <a href="#" class="navLabel">Messages</a>
                         </span>
                     </li>
                 </ul>
+
+                <!-- Nav items-RIGHT -->
                 <ul class="nav navbar-nav navbar-right">
-                    <li><span class="myNav glyphicon glyphicon-user"><a href="#"></a></span></li>
-                    <li><span class="myNav glyphicon glyphicon-log-in"><a href="#"></a></span></li>
+                    <li>
+                        <span class="myNav glyphicon glyphicon-user navIcon">
+                            <a href="#" class="navLabel">Sign In</a>
+                        </span>
+                    </li>
                 </ul>
             </div>
-            <div class="container-fluid handle" style="color: white">Menu</div>
+
+            <!-- Responsive Menu button -->
+            <div class="container-fluid handler" style="color: white">
+                <span class="glyphicon glyphicon-th-list navIcon"></span>
+                <span id="menuLabel">Menu</span>
+            </div>
         </nav>
+
+        <!-- Script for bringing the menu up/down -->
+        <script>
+            $(".handler").on("click", function() {
+                $("nav ul").toggleClass("showing");
+            })
+        </script>
 
         <!-- Main content -->
         <!--                -->
@@ -47,7 +67,7 @@
             <div class="row">
                 <div class="block" id="myProfile">
                     <!-- Name -->
-                    <h3 class="profileHeadline">Giang Vu</h3>
+                    <h3 class="headline profileHeadline">Giang Vu</h3>
 
                     <!-- Rounded, centered Profile Picture -->
                     <img id="profileImg" src="demo-profile-picture.png" alt="demo">
@@ -61,12 +81,16 @@
                     <!--                -->
                     
                     <div id="personalInfo">
-                        <!-- Linkedin -->
+                        <!-- Birth date -->
                         <div class="info">
-                            <span class="glyphicon glyphicon-link"></span>
-                            <a id="extLink" href="https://www.linkedin.com/in/giangvdm15">
-                                linkedin.com/in/giangvdm15
-                            </a>
+                            <span class="glyphicon glyphicon-gift"></span>
+                            <span>Jan 5<sup>th</sup>, 1997</span>
+                        </div>
+                        
+                        <!-- Education -->
+                        <div class="info">
+                            <span class="glyphicon glyphicon-education"></span>
+                            <span>freeCodeCamp</span>
                         </div>
 
                         <!-- Address -->
@@ -75,18 +99,25 @@
                             <span>Hanoi, Vietnam</span>
                         </div>
 
-                        <!-- Birth date -->
+                        <!-- Linkedin -->
                         <div class="info">
-                            <span class="glyphicon glyphicon-gift"></span>
-                            <span>Jan 5<sup>th</sup>, 1997</span>
+                            <span class="glyphicon glyphicon-link"></span>
+                            <a id="extLink" href="https://www.linkedin.com/in/giangvdm15">
+                                linkedin.com/in/giangvdm15
+                            </a>
                         </div>
+                        
                     </div>
                 </div>
             </div>
 
             <!-- Interests -->
             <div class="row">
-                <div class="block" id="interests"></div>
+                <div class="block" id="interests">
+                    <h3 class="headline">Interests</h3>
+                    <span class="interestItem mostFav">#Coding</span>
+                    <span class="interestItem reallyFav">#Gaming</span>
+                </div>
             </div>
         </div>
 
@@ -99,10 +130,12 @@
                     <form>
                         <input id="someText" type="text" placeholder="Hello, World!" onkeyup="checkEmpty(this)">
                         <button type="button" class="btn" id="postBtn" disabled>
-                            <span class="glyphicon glyphicon-pencil"></span> Post
+                            <span class="glyphicon glyphicon-pencil"></span>
+                             Post
                         </button>
                         <button type="reset" class="btn" id="resetBtn" onclick="disableButtonsUponReset()">
-                            <span class="glyphicon glyphicon-refresh"></span> Reset
+                            <span class="glyphicon glyphicon-refresh"></span>
+                             Reset
                         </button>
                     </form>
                 </div>
@@ -117,7 +150,9 @@
         <!-- Right sections -->
         <div class="col-md-2">
             <div class="row">
-                <div class="block" id="news"></div>
+                <div class="block" id="news">
+                    <h4>What's new?</h4>
+                </div>
             </div>
         </div>
 
