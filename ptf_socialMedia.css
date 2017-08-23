@@ -1,85 +1,239 @@
-body{
+/* Global styling */
+body {
     background-color: #f4f4ef;
+    /* color: #20232a; */
 }
 
-html > *{
+* {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.navbar{
-    position: fixed;
-    overflow: hidden;
-    top: 0;
-    width: 100%;
+/*********************/
+
+
+/* Navbar styling */
+.navbar-inverse {
     background-color: #20232a;
-    border-radius: 0;
-    z-index: 1;
 }
 
-.navbar a{
+.navbar-brand {
+    font-size: 22px;
+}
+
+li > *, .navbar-brand {
+    color: white !important;
+}
+
+/* Icons on Navbar */
+.navIcon {
+    padding: 15px 20px;
+    font-size: 20px;
+}
+
+#menuLabel {
+    font-size: 20px;
+}
+
+.navbar-brand {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+nav ul {
+    transition: 0.5s;
+}
+
+li:hover, span.myNav:hover {
+    background-color: #ababce !important;
+    color: #20232a !important;
+    cursor: pointer !important;
+}
+
+.handler {
+    width: 100%;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: none;
+    padding: 10px 20px;
+    background-color: black;
+}
+
+a.navLabel {
     color: white;
-    display: block;
-    float: left;
-    text-align: center;
     text-decoration: none;
-    padding: 20px;
+    display: none;
 }
 
-.row > .block{
-    margin-top: 20px;
+@media screen and (max-width: 767px) {
+    nav ul {
+        max-height: 0;
+        overflow: hidden;
+    }
+    .showing {
+        display: block;
+        max-height: 20em;
+    }
+    .navbar-header {
+        padding: 5px !important;
+    }
+    .myNav {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 15px;
+    }
+    .handler {
+        display: block;
+    }
+    a.navLabel {
+        display: inline;
+    }
+    #myProfile {
+        margin-top: 110px !important;
+    }
+}
+
+/*********************/
+
+
+/*Blocks styling */
+
+.block{
+    margin: 20px 10px 0;
     -webkit-box-shadow: 2px 2px 10px 2px rgba(184,182,184,1);
     -moz-box-shadow: 2px 2px 10px 2px rgba(184,182,184,1);
     box-shadow: 1px 1px 6px 1px rgba(184,182,184,1);
-}
-
-.row:first-child {
-    margin-top: 60px !important;
-}
-
-#myProfile {
-    margin-left: 10px;
-    margin-right: 10px;
-    height: 300px;
+    background-color: white;
+    padding: 5px 20px 20px 20px;
     box-sizing: border-box;
-    padding: 10px;
+}
+
+/* First block of every column */
+.row:first-child {
+    margin-top: 50px !important;
+}
+
+.headline {
+    margin: 10px 0 20px;
+}
+
+/*********************/
+
+
+/*Now styling for each particular block */
+/*My Profile */
+#myProfile {
+    color: #20232a;
 }
 
 img#profileImg {
-    max-height: 150px;
-    max-width: 150px;
+    max-height: 120px;
+    max-width: 120px;
     border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
 
-#interests {
-    margin-left: 10px;
-    margin-right: 10px;
-    height: 200px;
-    box-sizing: border-box;
+.profileHeadline {
+    text-align: center;
 }
 
-#status {
-    margin-left: 10px;
-    margin-right: 10px;
-    height: 100px;
-    box-sizing: border-box;
+a#extLink {
+    color: #20232a;
+    text-decoration: none !important;
 }
 
-#post {
-    margin-left: 10px;
-    margin-right: 10px;
+a#extLink:hover {
+    color: #acacbe !important;
+}
+
+div#personalInfo {
+    padding-left: 15px;
+    line-height: 2.2;
+    font-size: 15px;
+}
+
+.info > .glyphicon {
+    padding-right: 15px ;
+}
+
+/***********/
+
+/*Interests */
+.interestItem {
+    padding: 3px 8px;
+    margin: 1px;
+    color: white;
+}
+
+.mostFav {
+    background-color: #a01d26;
+}
+
+.reallyFav {
+    background-color: #BA262E;
+}
+
+.okayFav {
+    background-color: #C93B42;
+}
+
+.kindaFav {
+    background-color: #DB646B;
+}
+
+.maybeFav {
+    background-color: #C2757A;
+}
+
+/***********/
+
+/*Post form */
+#formPost {
+    color: #20232a;
+}
+
+input#someText {
+    width: 100%;
+    font-size: 15px;
+    height: 40px;
+    padding: 10px;
+    margin: 10px 0 15px; /* Top & bottom */
+}
+
+.btn {
+    color: white !important;
+    border-radius: 0;
+    outline: none !important;
+    border: none;
+    padding: 10px 15px !important;
+}
+
+[type=button] {
+    background-color: #20232a;
+}
+
+[type=reset] {
+    background-color: #a01d26;
+}
+
+/* or */
+/*#postBtn #resetBtn */
+.btn:hover {
+    background-color: #acacbe;
+    color: #20232a !important;
+}
+
+/***********/
+
+
+
+#feed {
     height: 400px;
     box-sizing: border-box;
 }
 
 #news {
-    margin-left: 10px;
-    margin-right: 10px;
     height: 300px;
     box-sizing: border-box;
 }
-
-/* .feed {
-    margin: 10px 0 0 10px;
-    height: 300px;
-    box-sizing: border-box;
-} */
