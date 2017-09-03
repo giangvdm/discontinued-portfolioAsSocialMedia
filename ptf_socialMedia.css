@@ -107,6 +107,15 @@ a.navLabel {
     box-sizing: border-box;
 }
 
+/*Unique block: Accordion */
+.my-accordion {
+    margin: 20px 10px 0;
+    -webkit-box-shadow: 2px 2px 10px 2px rgba(184,182,184,1);
+    -moz-box-shadow: 2px 2px 10px 2px rgba(184,182,184,1);
+    box-shadow: 1px 1px 6px 1px rgba(184,182,184,1);
+    box-sizing: border-box;
+}
+
 /* First block of every column */
 .row:first-child {
     margin-top: 50px !important;
@@ -184,6 +193,25 @@ div#personalInfo {
 
 .maybeFav {
     background-color: #C2757A;
+}
+
+.acc-header {
+    background-color: #acacbe;
+}
+
+.acc-header h3.acc-block-title {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.acc-content {
+    padding: 20px;
+    display: none;
+    /* transition: height 1s; */
+}
+
+.my-accordion {
+    transition: all 1s;
 }
 
 /***********/

@@ -112,14 +112,31 @@
             </div>
 
             <!-- Interests -->
-            <div class="row">
+            <!-- <div class="row">
                 <div class="block" id="interests">
                     <h3 class="headline">Interests</h3>
                     <span class="interestItem mostFav">#Coding</span>
                     <span class="interestItem reallyFav">#Gaming</span>
                 </div>
+            </div> -->
+
+            <!-- Accordion -->
+
+            <!-- Interests -->
+            <div class="row">
+                <div class="my-accordion">
+                    <div class="acc-header" id="interests" onclick="openAccordion(this)">
+                        <h3 class="acc-block-title">Interests</h3>
+                    </div>
+                    <div class="acc-content">
+                        <span class="interestItem mostFav">#Coding</span>
+                        <span class="interestItem reallyFav">#Gaming</span>
+                    </div>
+                </div>
             </div>
         </div>
+
+        <!-- End of left section -->
 
         <!-- Center sections -->
         <div class="col-md-7">
@@ -146,6 +163,8 @@
                 <div class="block" id="feed"></div>
             </div>
         </div>
+
+        <!-- End of center section -->
         
         <!-- Right sections -->
         <div class="col-md-2">
@@ -155,6 +174,10 @@
                 </div>
             </div>
         </div>
+
+        <!-- End of right sections -->
+
+        <!-- Footer -->
 
     </body>
 </html>
