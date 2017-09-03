@@ -12,6 +12,7 @@
         <script src="core.js"></script>
     </head>
     <body>
+
         <!-- Navigation bar -->
         <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="container-fluid">
@@ -47,7 +48,7 @@
             <!-- Responsive Menu button -->
             <div class="container-fluid handler" style="color: white">
                 <span class="glyphicon glyphicon-th-list navIcon"></span>
-                <span id="menuLabel">Menu</span>
+                <span id="menu-label">Menu</span>
             </div>
         </nav>
 
@@ -58,8 +59,10 @@
             })
         </script>
 
-        <!-- Main content -->
         <!--                -->
+
+        <!-- Main content -->
+        <!--        -->
 
         <!-- Left sections -->
         <div class="col-md-3">
@@ -70,14 +73,14 @@
                     <h3 class="headline profileHeadline">Giang Vu</h3>
 
                     <!-- Rounded, centered Profile Picture -->
-                    <img id="profileImg" src="demo-profile-picture.png" alt="demo">
+                    <img id="profile-img" src="demo-profile-picture.png" alt="demo">
                     <br/>
 
                     <!-- Job Title -->
                     <h4 class="profileHeadline">Web Developer</h4>
 
                     <!-- A nice separating horizontal line -->
-                    <hr style="width: 90%"/>
+                    <hr/>
                     <!--                -->
                     
                     <div id="personalInfo">
@@ -158,9 +161,30 @@
                 </div>
             </div>
 
-            <!-- Where posts are shown -->
+            <!-- Where posts/feeds are shown -->
             <div class="row">
-                <div class="block" id="feed"></div>
+                <div class="block post">
+                    <!-- Post information -->
+                    <div class="post-info">
+                        <img src="giang_2.jpg" alt="" class="postAuthor-img">
+                        <span class="post-time">12 mins</span>
+                        <h4 class="postAuthor-info author-name">Giang</h4>
+                        <h4 class="postAuthor-info author-email">giang@gmail.com</h4>
+                    </div>
+
+                    <hr/>
+
+                    <!-- Post content -->
+                    <div class="row">
+                        <div class="half">
+                            <img src="germany_1.jpg" alt="" class="post-img">
+                        </div>
+   
+                        <div class="half">
+                            <img src="germany_2.jpg" alt="" class="post-img">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
