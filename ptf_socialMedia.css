@@ -237,30 +237,63 @@ input#someText {
     padding: 10px 15px !important;
 }
 
-[type=button] {
+#postBtn, #tweetBtn {
     background-color: #20232a;
 }
 
-[type=reset] {
+/*or resetBtn */
+[type=reset], #likeBtn {
     background-color: #a01d26;
 }
 
-/* or */
-/*#postBtn #resetBtn */
 .btn:hover {
-    background-color: #acacbe;
+    background-color: #acacbe !important;
     color: #20232a !important;
 }
 
 /***********/
 
-
-
-#feed {
-    height: 400px;
+/*Post Blocks */
+.post {
     box-sizing: border-box;
 }
 
+.postAuthor-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    float: left;
+    margin-right: 15px;
+}
+
+.post-time {
+    font-size: 15px;
+    padding-top: 5px;
+    float: right;
+    color: #acacbe;
+}
+
+.postAuthor-info {
+    display: block;
+    box-sizing: border-box;
+}
+
+.author-name {
+    padding-top: 5px;
+}
+
+.author-email {
+    color: #acacbe;
+    cursor: pointer;
+    font-size: 15px;
+    max-width: 400px;
+}
+
+.post-content {
+    font-size: 15px;
+}
+
+/***********/
 #news {
     height: 300px;
     box-sizing: border-box;

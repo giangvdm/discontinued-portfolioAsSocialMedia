@@ -18,3 +18,15 @@ function openAccordion(obj) {
     }
     else (obj.nextElementSibling.style.display = "none");
 }
+
+function setMailTo() {
+    var emails = document.getElementsByClassName("author-email");
+    for(var i = 0; i < emails.length; i++){
+        emails[i].onclick = mailToAuthor(emails[i]);
+    }
+}
+
+function mailToAuthor(email) {
+    var getEmail = email.innerHTML;
+    window.location.href = "mailto:" + getEmail.toString();
+}

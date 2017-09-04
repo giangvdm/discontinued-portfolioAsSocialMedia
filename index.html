@@ -6,6 +6,7 @@
         <meta name="author" content="Giang Vu">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">        
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <link rel="stylesheet" type="text/css" href="ptf_socialMedia.css">
@@ -114,15 +115,6 @@
                 </div>
             </div>
 
-            <!-- Interests -->
-            <!-- <div class="row">
-                <div class="block" id="interests">
-                    <h3 class="headline">Interests</h3>
-                    <span class="interestItem mostFav">#Coding</span>
-                    <span class="interestItem reallyFav">#Gaming</span>
-                </div>
-            </div> -->
-
             <!-- Accordion -->
 
             <!-- Interests -->
@@ -161,12 +153,21 @@
                 </div>
             </div>
 
+            <!-- JQuery Script for adding onclick event to every element with 'author-email' class -->
+            <script>
+                $(document).ready(function(){
+                    $(".author-email").click(function(){
+                        mailToAuthor(this);
+                    })
+                });
+            </script>
+
             <!-- Where posts/feeds are shown -->
             <div class="row">
                 <div class="block post">
                     <!-- Post information -->
                     <div class="post-info">
-                        <img src="giang_2.jpg" alt="" class="postAuthor-img">
+                        <img src="demo-profile-picture.png" alt="" class="postAuthor-img">
                         <span class="post-time">12 mins</span>
                         <h4 class="postAuthor-info author-name">Giang</h4>
                         <h4 class="postAuthor-info author-email">giang@gmail.com</h4>
@@ -175,7 +176,28 @@
                     <hr/>
 
                     <!-- Post content -->
-                    <div class="row">
+                    <div class="post-content">
+                        Sed facilisis, massa et varius varius, sapien massa facilisis neque, in sodales nibh dui nec sapien. 
+                        Curabitur a convallis mauris. Aliquam dui eros, tincidunt id volutpat vestibulum, malesuada ac lacus. 
+                        Suspendisse risus justo, mollis in lacus at, luctus ultrices libero. 
+                        Maecenas justo dui, malesuada ut lacus id, lobortis faucibus ipsum. 
+                        Curabitur libero tortor, suscipit nec lorem nec, cursus ullamcorper mauris. 
+                        Fusce interdum ex non augue luctus, eu vestibulum purus porta. 
+                        Proin mollis commodo metus eget placerat.
+                    </div>
+
+                    <hr/>
+
+                    <button type="button" class="btn" id="likeBtn">
+                        <span class="glyphicon glyphicon-heart-empty"></span>
+                        Like
+                    </button>
+
+                    <button class="btn" id="tweetBtn">
+                        <span class="fa fa-twitter"></span>
+                    </button>
+
+                    <!-- <div class="row">
                         <div class="half">
                             <img src="germany_1.jpg" alt="" class="post-img">
                         </div>
@@ -183,7 +205,7 @@
                         <div class="half">
                             <img src="germany_2.jpg" alt="" class="post-img">
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
