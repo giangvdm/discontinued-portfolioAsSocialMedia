@@ -6,12 +6,14 @@
         <meta name="author" content="Giang Vu">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">        
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <link rel="stylesheet" type="text/css" href="ptf_socialMedia.css">
         <script src="core.js"></script>
     </head>
     <body>
+
         <!-- Navigation bar -->
         <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="container-fluid">
@@ -47,7 +49,7 @@
             <!-- Responsive Menu button -->
             <div class="container-fluid handler" style="color: white">
                 <span class="glyphicon glyphicon-th-list navIcon"></span>
-                <span id="menuLabel">Menu</span>
+                <span id="menu-label">Menu</span>
             </div>
         </nav>
 
@@ -58,26 +60,28 @@
             })
         </script>
 
-        <!-- Main content -->
         <!--                -->
+
+        <!-- Main content -->
+        <!--        -->
 
         <!-- Left sections -->
         <div class="col-md-3">
             <!-- My Profile -->
             <div class="row">
-                <div class="block" id="myProfile">
+                <div class="block myBoxShadow" id="myProfile">
                     <!-- Name -->
                     <h3 class="headline profileHeadline">Giang Vu</h3>
 
                     <!-- Rounded, centered Profile Picture -->
-                    <img id="profileImg" src="demo-profile-picture.png" alt="demo">
+                    <img id="profile-img" src="demo-profile-picture.png" alt="demo">
                     <br/>
 
                     <!-- Job Title -->
                     <h4 class="profileHeadline">Web Developer</h4>
 
                     <!-- A nice separating horizontal line -->
-                    <hr style="width: 90%"/>
+                    <hr/>
                     <!--                -->
                     
                     <div id="personalInfo">
@@ -111,26 +115,18 @@
                 </div>
             </div>
 
-            <!-- Interests -->
-            <!-- <div class="row">
-                <div class="block" id="interests">
-                    <h3 class="headline">Interests</h3>
-                    <span class="interestItem mostFav">#Coding</span>
-                    <span class="interestItem reallyFav">#Gaming</span>
-                </div>
-            </div> -->
-
             <!-- Accordion -->
 
             <!-- Interests -->
             <div class="row">
-                <div class="my-accordion">
+                <div class="my-accordion myBoxShadow">
                     <div class="acc-header" id="interests" onclick="openAccordion(this)">
                         <h3 class="acc-block-title">Interests</h3>
                     </div>
                     <div class="acc-content">
                         <span class="interestItem mostFav">#Coding</span>
                         <span class="interestItem reallyFav">#Gaming</span>
+                        <span class="interestItem reallyFav">#Metal Music</span>
                     </div>
                 </div>
             </div>
@@ -142,7 +138,7 @@
         <div class="col-md-7">
             <!-- Section for user to post status -->
             <div class="row">
-                <div class="block" id="formPost">
+                <div class="block myBoxShadow" id="formPost">
                     <h4>Post something here:</h4>
                     <form>
                         <input id="someText" type="text" placeholder="Hello, World!" onkeyup="checkEmpty(this)">
@@ -158,9 +154,108 @@
                 </div>
             </div>
 
-            <!-- Where posts are shown -->
+            <!-- JQuery Script for adding onclick event to every element with 'author-email' class -->
+            <script>
+                $(document).ready(function(){
+                    $(".author-email").click(function(){
+                        mailToAuthor(this);
+                    })
+                });
+            </script>
+
+            <!-- Where posts/feeds are shown -->
             <div class="row">
-                <div class="block" id="feed"></div>
+                <div class="block myBoxShadow post">
+                    <!-- Post information -->
+                    <div class="post-info">
+                        <img src="demo-profile-picture.png" alt="" class="postAuthor-img">
+                        <span class="post-time">12 mins</span>
+                        <h4 class="postAuthor-info author-name">Giang</h4>
+                        <h4 class="postAuthor-info author-email">giang@gmail.com</h4>
+                    </div>
+
+                    <hr/>
+
+                    <!-- Post content -->
+                    <div class="post-content">
+                        Sed facilisis, massa et varius varius, sapien massa facilisis neque, in sodales nibh dui nec sapien. 
+                        Curabitur a convallis mauris. Aliquam dui eros, tincidunt id volutpat vestibulum, malesuada ac lacus. 
+                        Suspendisse risus justo, mollis in lacus at, luctus ultrices libero. 
+                        Maecenas justo dui, malesuada ut lacus id, lobortis faucibus ipsum. 
+                        Curabitur libero tortor, suscipit nec lorem nec, cursus ullamcorper mauris. 
+                        Fusce interdum ex non augue luctus, eu vestibulum purus porta. 
+                        Proin mollis commodo metus eget placerat.
+                    </div>
+
+                    <hr/>
+
+                    <button type="button" class="btn" id="likeBtn">
+                        <span class="glyphicon glyphicon-heart-empty"></span>
+                        Like
+                    </button>
+
+                    <button class="btn fbBtn">
+                        <span class="fa fa-facebook"></span>
+                    </button>
+
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="block myBoxShadow post">
+                    <!-- Post information -->
+                    <div class="post-info">
+                        <img src="demo-profile-picture.png" alt="" class="postAuthor-img">
+                        <span class="post-time">12 mins</span>
+                        <div class="post__highlight myBoxShadow">
+                            <span class="glyphicon glyphicon-star post__highlight-star"></span>
+                            <h6>Highlight</h6>
+                        </div>
+                        <h4 class="postAuthor-info author-name">Giang</h4>
+                        <h4 class="postAuthor-info author-email">giang@gmail.com</h4>
+                    </div>
+
+                    <hr/>
+
+                    <!-- Post content -->
+                    <div class="post__content__text">
+                        Sed facilisis, massa et varius varius, sapien massa facilisis neque, in sodales nibh dui nec sapien. 
+                        Curabitur a convallis mauris. Aliquam dui eros, tincidunt id volutpat vestibulum, malesuada ac lacus. 
+                        Suspendisse risus justo, mollis in lacus at, luctus ultrices libero. 
+                        Maecenas justo dui, malesuada ut lacus id, lobortis faucibus ipsum. 
+                        Curabitur libero tortor, suscipit nec lorem nec, cursus ullamcorper mauris. 
+                        Fusce interdum ex non augue luctus, eu vestibulum purus porta. 
+                        Proin mollis commodo metus eget placerat.
+
+                        <div class="post__content__polaroid">
+                            <img src="demo-profile-picture.png" alt="" 
+                            class="post__content__polaroid__photo">
+                            <div class="post__content__polaroid__caption">
+                                caption
+                            </div>
+                        </div>
+                        
+                        <div class="post__content__polaroid">
+                            <img src="demo-profile-picture.png" alt="" 
+                            class="post__content__polaroid__photo">
+                            <div class="post__content__polaroid__caption">
+                                caption
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr/>
+
+                    <button type="button" class="btn" id="likeBtn">
+                        <span class="glyphicon glyphicon-heart-empty"></span>
+                        Like
+                    </button>
+
+                    <button class="btn fbBtn">
+                        <span class="fa fa-facebook"></span>
+                    </button>
+
+                </div>
             </div>
         </div>
 
@@ -169,7 +264,7 @@
         <!-- Right sections -->
         <div class="col-md-2">
             <div class="row">
-                <div class="block" id="news">
+                <div class="block myBoxShadow" id="news">
                     <h4>What's new?</h4>
                 </div>
             </div>
