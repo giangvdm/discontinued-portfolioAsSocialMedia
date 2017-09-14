@@ -93,15 +93,20 @@ a.navLabel {
 }
 
 /*********************/
+/*Commonly used */
+.myBoxShadow {
+    -webkit-box-shadow: 2px 2px 10px 2px rgba(184,182,184,1);
+    -moz-box-shadow: 2px 2px 10px 2px rgba(184,182,184,1);
+    box-shadow: 1px 1px 6px 1px rgba(184,182,184,1);
+}
 
+
+/*********************/
 
 /*Blocks styling */
 
 .block{
     margin: 20px 10px 0;
-    -webkit-box-shadow: 2px 2px 10px 2px rgba(184,182,184,1);
-    -moz-box-shadow: 2px 2px 10px 2px rgba(184,182,184,1);
-    box-shadow: 1px 1px 6px 1px rgba(184,182,184,1);
     background-color: white;
     padding: 5px 20px 20px 20px;
     box-sizing: border-box;
@@ -110,9 +115,6 @@ a.navLabel {
 /*Unique block: Accordion */
 .my-accordion {
     margin: 20px 10px 0;
-    -webkit-box-shadow: 2px 2px 10px 2px rgba(184,182,184,1);
-    -moz-box-shadow: 2px 2px 10px 2px rgba(184,182,184,1);
-    box-shadow: 1px 1px 6px 1px rgba(184,182,184,1);
     box-sizing: border-box;
 }
 
@@ -273,6 +275,20 @@ input#someText {
     color: #acacbe;
 }
 
+.post__highlight {
+    float: right;
+    margin: -15px 30px !important;
+    color: white;
+    background-color: #a01d26;
+    padding: 5px;
+}
+
+.post__highlight-star {
+    margin-left: auto;
+    margin-right: auto;
+    padding: auto;
+}
+
 .postAuthor-info {
     display: block;
     box-sizing: border-box;
@@ -289,8 +305,21 @@ input#someText {
     max-width: 400px;
 }
 
-.post-content {
+.post__content__text {
     font-size: 15px;
+}
+
+.post__content__photo {
+    opacity: 0.9;
+    max-width: 49%;
+    max-height: 100%;
+    margin: 10px 0;
+    display: inline-block;
+    border: 1px solid #acacbe;
+}
+
+.post__content__photo:hover {
+    opacity: 1.0;
 }
 
 /***********/

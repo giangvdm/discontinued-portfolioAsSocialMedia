@@ -69,7 +69,7 @@
         <div class="col-md-3">
             <!-- My Profile -->
             <div class="row">
-                <div class="block" id="myProfile">
+                <div class="block myBoxShadow" id="myProfile">
                     <!-- Name -->
                     <h3 class="headline profileHeadline">Giang Vu</h3>
 
@@ -119,13 +119,14 @@
 
             <!-- Interests -->
             <div class="row">
-                <div class="my-accordion">
+                <div class="my-accordion myBoxShadow">
                     <div class="acc-header" id="interests" onclick="openAccordion(this)">
                         <h3 class="acc-block-title">Interests</h3>
                     </div>
                     <div class="acc-content">
                         <span class="interestItem mostFav">#Coding</span>
                         <span class="interestItem reallyFav">#Gaming</span>
+                        <span class="interestItem reallyFav">#Metal Music</span>
                     </div>
                 </div>
             </div>
@@ -137,7 +138,7 @@
         <div class="col-md-7">
             <!-- Section for user to post status -->
             <div class="row">
-                <div class="block" id="formPost">
+                <div class="block myBoxShadow" id="formPost">
                     <h4>Post something here:</h4>
                     <form>
                         <input id="someText" type="text" placeholder="Hello, World!" onkeyup="checkEmpty(this)">
@@ -164,7 +165,7 @@
 
             <!-- Where posts/feeds are shown -->
             <div class="row">
-                <div class="block post">
+                <div class="block myBoxShadow post">
                     <!-- Post information -->
                     <div class="post-info">
                         <img src="demo-profile-picture.png" alt="" class="postAuthor-img">
@@ -197,15 +198,50 @@
                         <span class="fa fa-twitter"></span>
                     </button>
 
-                    <!-- <div class="row">
-                        <div class="half">
-                            <img src="germany_1.jpg" alt="" class="post-img">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="block myBoxShadow post">
+                    <!-- Post information -->
+                    <div class="post-info">
+                        <img src="demo-profile-picture.png" alt="" class="postAuthor-img">
+                        <span class="post-time">12 mins</span>
+                        <div class="post__highlight myBoxShadow">
+                            <span class="glyphicon glyphicon-star"></span>
+                            <h6>Highlight</h6>
                         </div>
-   
-                        <div class="half">
-                            <img src="germany_2.jpg" alt="" class="post-img">
-                        </div>
-                    </div> -->
+                        <h4 class="postAuthor-info author-name">Giang</h4>
+                        <h4 class="postAuthor-info author-email">giang@gmail.com</h4>
+                    </div>
+
+                    <hr/>
+
+                    <!-- Post content -->
+                    <div class="post__content__text">
+                        Sed facilisis, massa et varius varius, sapien massa facilisis neque, in sodales nibh dui nec sapien. 
+                        Curabitur a convallis mauris. Aliquam dui eros, tincidunt id volutpat vestibulum, malesuada ac lacus. 
+                        Suspendisse risus justo, mollis in lacus at, luctus ultrices libero. 
+                        Maecenas justo dui, malesuada ut lacus id, lobortis faucibus ipsum. 
+                        Curabitur libero tortor, suscipit nec lorem nec, cursus ullamcorper mauris. 
+                        Fusce interdum ex non augue luctus, eu vestibulum purus porta. 
+                        Proin mollis commodo metus eget placerat.
+
+                        <img src="demo-profile-picture.png" alt="" class="post__content__photo">
+                        <img src="demo-profile-picture.png" alt="" class="post__content__photo">
+                    </div>
+
+                    <hr/>
+
+                    <button type="button" class="btn" id="likeBtn">
+                        <span class="glyphicon glyphicon-heart-empty"></span>
+                        Like
+                    </button>
+
+                    <button class="btn" id="tweetBtn">
+                        <span class="fa fa-twitter"></span>
+                    </button>
+
                 </div>
             </div>
         </div>
@@ -215,7 +251,7 @@
         <!-- Right sections -->
         <div class="col-md-2">
             <div class="row">
-                <div class="block" id="news">
+                <div class="block myBoxShadow" id="news">
                     <h4>What's new?</h4>
                 </div>
             </div>
