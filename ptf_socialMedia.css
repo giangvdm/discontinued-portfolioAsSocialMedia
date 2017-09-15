@@ -25,7 +25,7 @@ body {
 }
 
 .navbar-brand {
-    font-size: 22px;
+    font-size: 24px;
 }
 
 li > *, .navbar-brand {
@@ -281,7 +281,7 @@ input#someText {
 }
 
 .post__highlight-star {
-    margin-left: 15px;
+    margin-left: 20px;
 }
 
 .postAuthor-info {
@@ -301,7 +301,8 @@ input#someText {
 }
 
 .post__content__text {
-    font-size: 15px;
+    font-size: 14px;
+    line-height: 22px;
 }
 
 .post__content__polaroid {
