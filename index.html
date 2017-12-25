@@ -1,282 +1,281 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>socialMedia-styled Portfolio</title>
-        <meta charset="utf-8">
-        <meta name="author" content="Giang Vu">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">        
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="ptf_socialMedia.css">
-        <script src="core.js"></script>
-    </head>
-    <body>
 
-        <!-- Navigation bar -->
-        <nav class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container-fluid">
-                <!-- Brand/Site name -->
-                <div class="myNav navbar-header">
-                    <a class="navbar-brand" href="#">Giang Vu's Portfolio</a>
+<head>
+    <title>socialMedia-styled Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Giang Vu">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="ptf_socialMedia.css">
+    <script src="core.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand/Site name -->
+            <div class="myNav navbar-header">
+                <a class="navbar-brand" href="#">Giang Vu's Portfolio</a>
+            </div>
+
+            <!-- Nav items-LETF -->
+            <ul class="nav navbar-nav">
+                <li>
+                    <span class="myNav glyphicon glyphicon-globe navIcon">
+                        <a href="#" class="nav-label">Explore</a>
+                    </span>
+                </li>
+                <li>
+                    <span class="myNav glyphicon glyphicon-envelope navIcon">
+                        <a href="#" class="nav-label">Messages</a>
+                    </span>
+                </li>
+            </ul>
+
+            <!-- Nav items-RIGHT -->
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <span class="myNav glyphicon glyphicon-user navIcon">
+                        <a href="#" class="nav-label">Sign In</a>
+                    </span>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Responsive Menu button -->
+        <div class="container-fluid handler" style="color: white">
+            <span class="glyphicon glyphicon-th-list navIcon"></span>
+            <span id="menu-label">Menu</span>
+        </div>
+    </nav>
+
+    <!-- Script for bringing the menu up/down -->
+    <script>
+        $(".handler").on("click", function () {
+            $("nav ul").toggleClass("showing");
+        })
+    </script>
+
+    <!--                -->
+
+    <!-- Main content -->
+    <!--        -->
+
+    <!-- Left sections -->
+    <div class="col-md-3">
+        <!-- My Profile -->
+        <div class="row">
+            <div class="block myBoxShadow" id="myProfile">
+                <!-- Name -->
+                <h3 class="headline profile-headline">Giang Vu</h3>
+
+                <!-- Rounded, centered Profile Picture -->
+                <img id="profile-img" src="demo-profile-picture.png" alt="demo">
+                <br/>
+
+                <!-- Job Title -->
+                <h4 class="profile-headline">Web Developer</h4>
+
+                <!-- A nice separating horizontal line -->
+                <hr/>
+                <!--                -->
+
+                <div id="personalInfo">
+                    <!-- Birth date -->
+                    <div class="info">
+                        <span class="glyphicon glyphicon-gift"></span>
+                        <span>Jan 5
+                            <sup>th</sup>, 1997</span>
+                    </div>
+
+                    <!-- Education -->
+                    <div class="info">
+                        <span class="glyphicon glyphicon-education"></span>
+                        <span>freeCodeCamp</span>
+                    </div>
+
+                    <!-- Address -->
+                    <div class="info">
+                        <span class="glyphicon glyphicon-home"></span>
+                        <span>Hanoi, Vietnam</span>
+                    </div>
+
+                    <!-- Linkedin -->
+                    <div class="info">
+                        <span class="glyphicon glyphicon-link"></span>
+                        <a id="extLink" href="https://www.linkedin.com/in/giangvdm15">
+                            linkedin.com/in/giangvdm15
+                        </a>
+                    </div>
+
                 </div>
-                
-                <!-- Nav items-LETF -->
-                <ul class="nav navbar-nav">
-                    <li>
-                        <span class="myNav glyphicon glyphicon-globe navIcon">
-                            <a href="#" class="navLabel">Explore</a>
-                        </span>
-                    </li>
-                    <li>
-                        <span class="myNav glyphicon glyphicon-envelope navIcon">
-                            <a href="#" class="navLabel">Messages</a>
-                        </span>
-                    </li>
-                </ul>
-
-                <!-- Nav items-RIGHT -->
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <span class="myNav glyphicon glyphicon-user navIcon">
-                            <a href="#" class="navLabel">Sign In</a>
-                        </span>
-                    </li>
-                </ul>
             </div>
+        </div>
 
-            <!-- Responsive Menu button -->
-            <div class="container-fluid handler" style="color: white">
-                <span class="glyphicon glyphicon-th-list navIcon"></span>
-                <span id="menu-label">Menu</span>
+        <!-- Accordion -->
+
+        <!-- Interests -->
+        <div class="row">
+            <div class="my-accordion myBoxShadow">
+                <div class="acc-header" id="interests" onclick="openAccordion(this)">
+                    <h3 class="acc-block-title">Interests</h3>
+                </div>
+                <div class="acc-content">
+                    <span class="interestItem mostFav">#Coding</span>
+                    <span class="interestItem reallyFav">#Gaming</span>
+                    <span class="interestItem reallyFav">#Metal Music</span>
+                </div>
             </div>
-        </nav>
+        </div>
+    </div>
 
-        <!-- Script for bringing the menu up/down -->
+    <!-- End of left section -->
+
+    <!-- Center sections -->
+    <div class="col-md-7">
+        <!-- Section for user to post status -->
+        <div class="row">
+            <div class="block myBoxShadow" id="formPost">
+                <h4>Post something here:</h4>
+                <form>
+                    <input id="someText" type="text" placeholder="Hello, World!" onkeyup="checkEmpty(this)">
+                    <button type="button" class="btn" id="postBtn" disabled>
+                        <span class="fa fa-pencil" aria-hidden="true"></span>
+                        Post
+                    </button>
+                    <button type="reset" class="btn" id="resetBtn" onclick="disableButtonsUponReset()">
+                        <span class="fa fa-refresh" aria-hidden="true"></span>
+                        Reset
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- JQuery Script for adding onclick event to every element with 'author-email' class -->
         <script>
-            $(".handler").on("click", function() {
-                $("nav ul").toggleClass("showing");
-            })
+            $(document).ready(function () {
+                $(".author-email").click(function () {
+                    mailToAuthor(this);
+                })
+            });
         </script>
 
-        <!--                -->
-
-        <!-- Main content -->
-        <!--        -->
-
-        <!-- Left sections -->
-        <div class="col-md-3">
-            <!-- My Profile -->
-            <div class="row">
-                <div class="block myBoxShadow" id="myProfile">
-                    <!-- Name -->
-                    <h3 class="headline profileHeadline">Giang Vu</h3>
-
-                    <!-- Rounded, centered Profile Picture -->
-                    <img id="profile-img" src="demo-profile-picture.png" alt="demo">
-                    <br/>
-
-                    <!-- Job Title -->
-                    <h4 class="profileHeadline">Web Developer</h4>
-
-                    <!-- A nice separating horizontal line -->
-                    <hr/>
-                    <!--                -->
-                    
-                    <div id="personalInfo">
-                        <!-- Birth date -->
-                        <div class="info">
-                            <span class="glyphicon glyphicon-gift"></span>
-                            <span>Jan 5<sup>th</sup>, 1997</span>
-                        </div>
-                        
-                        <!-- Education -->
-                        <div class="info">
-                            <span class="glyphicon glyphicon-education"></span>
-                            <span>freeCodeCamp</span>
-                        </div>
-
-                        <!-- Address -->
-                        <div class="info">
-                            <span class="glyphicon glyphicon-home"></span>
-                            <span>Hanoi, Vietnam</span>
-                        </div>
-
-                        <!-- Linkedin -->
-                        <div class="info">
-                            <span class="glyphicon glyphicon-link"></span>
-                            <a id="extLink" href="https://www.linkedin.com/in/giangvdm15">
-                                linkedin.com/in/giangvdm15
-                            </a>
-                        </div>
-                        
-                    </div>
+        <!-- Where posts/feeds are shown -->
+        <div class="row">
+            <div class="block myBoxShadow post">
+                <!-- Post information -->
+                <div class="post-info">
+                    <img src="demo-profile-picture.png" alt="" class="postAuthor-img">
+                    <span class="post-time">12 mins</span>
+                    <h4 class="postAuthor-info author-name">Anonymous</h4>
+                    <span class="postAuthor-info author-email">any@gmail.com</span>
                 </div>
-            </div>
 
-            <!-- Accordion -->
+                <hr/>
 
-            <!-- Interests -->
-            <div class="row">
-                <div class="my-accordion myBoxShadow">
-                    <div class="acc-header" id="interests" onclick="openAccordion(this)">
-                        <h3 class="acc-block-title">Interests</h3>
-                    </div>
-                    <div class="acc-content">
-                        <span class="interestItem mostFav">#Coding</span>
-                        <span class="interestItem reallyFav">#Gaming</span>
-                        <span class="interestItem reallyFav">#Metal Music</span>
-                    </div>
+                <!-- Post content -->
+                <div class="post__content__text">
+                    <p>
+                        Sed facilisis, massa et varius varius, sapien massa facilisis neque, in sodales nibh dui nec sapien. Curabitur a convallis
+                        mauris. Aliquam dui eros, tincidunt id volutpat vestibulum, malesuada ac lacus. Suspendisse risus
+                        justo, mollis in lacus at, luctus ultrices libero. Maecenas justo dui, malesuada ut lacus id, lobortis
+                        faucibus ipsum. Curabitur libero tortor, suscipit nec lorem nec, cursus ullamcorper mauris. Fusce
+                        interdum ex non augue luctus, eu vestibulum purus porta. Proin mollis commodo metus eget placerat.
+                    </p>
                 </div>
+
+                <hr/>
+
+                <button type="button" class="btn" id="likeBtn">
+                    <span class="fa fa-heart" aria-hidden="true"></span>
+                    Like
+                </button>
+
+                <button class="btn fbBtn">
+                    <span class="fa fa-facebook"></span>
+                </button>
+
             </div>
         </div>
 
-        <!-- End of left section -->
-
-        <!-- Center sections -->
-        <div class="col-md-7">
-            <!-- Section for user to post status -->
-            <div class="row">
-                <div class="block myBoxShadow" id="formPost">
-                    <h4>Post something here:</h4>
-                    <form>
-                        <input id="someText" type="text" placeholder="Hello, World!" onkeyup="checkEmpty(this)">
-                        <button type="button" class="btn" id="postBtn" disabled>
-                            <span class="fa fa-pencil" aria-hidden="true"></span>
-                             Post
-                        </button>
-                        <button type="reset" class="btn" id="resetBtn" onclick="disableButtonsUponReset()">
-                            <span class="fa fa-refresh" aria-hidden="true"></span>
-                             Reset
-                        </button>
-                    </form>
+        <div class="row">
+            <div class="block myBoxShadow post">
+                <!-- Post information -->
+                <div class="post-info">
+                    <img src="demo-profile-picture.png" alt="" class="postAuthor-img">
+                    <span class="post-time">12 mins</span>
+                    <div class="post__highlight myBoxShadow">
+                        <span class="fa fa-star post__highlight-star" aria-hidden="true"></span>
+                        <h5>Highlight</h5>
+                    </div>
+                    <h4 class="postAuthor-info author-name">Giang</h4>
+                    <span class="postAuthor-info author-email">giang@gmail.com</span>
                 </div>
-            </div>
 
-            <!-- JQuery Script for adding onclick event to every element with 'author-email' class -->
-            <script>
-                $(document).ready(function(){
-                    $(".author-email").click(function(){
-                        mailToAuthor(this);
-                    })
-                });
-            </script>
+                <hr/>
 
-            <!-- Where posts/feeds are shown -->
-            <div class="row">
-                <div class="block myBoxShadow post">
-                    <!-- Post information -->
-                    <div class="post-info">
-                        <img src="demo-profile-picture.png" alt="" class="postAuthor-img">
-                        <span class="post-time">12 mins</span>
-                        <h4 class="postAuthor-info author-name">Giang</h4>
-                        <h4 class="postAuthor-info author-email">giang@gmail.com</h4>
-                    </div>
+                <!-- Post content -->
+                <div class="post__content__text">
+                    <p>
+                        Sed facilisis, massa et varius varius, sapien massa facilisis neque, in sodales nibh dui nec sapien. Curabitur a convallis
+                        mauris. Aliquam dui eros, tincidunt id volutpat vestibulum, malesuada ac lacus. Suspendisse risus
+                        justo, mollis in lacus at, luctus ultrices libero. Maecenas justo dui, malesuada ut lacus id, lobortis
+                        faucibus ipsum. Curabitur libero tortor, suscipit nec lorem nec, cursus ullamcorper mauris. Fusce
+                        interdum ex non augue luctus, eu vestibulum purus porta. Proin mollis commodo metus eget placerat.
+                    </p>
 
-                    <hr/>
-
-                    <!-- Post content -->
-                    <div class="post__content__text">
-                        <p>
-                            Sed facilisis, massa et varius varius, sapien massa facilisis neque, in sodales nibh dui nec sapien. 
-                            Curabitur a convallis mauris. Aliquam dui eros, tincidunt id volutpat vestibulum, malesuada ac lacus. 
-                            Suspendisse risus justo, mollis in lacus at, luctus ultrices libero. 
-                            Maecenas justo dui, malesuada ut lacus id, lobortis faucibus ipsum. 
-                            Curabitur libero tortor, suscipit nec lorem nec, cursus ullamcorper mauris. 
-                            Fusce interdum ex non augue luctus, eu vestibulum purus porta. 
-                            Proin mollis commodo metus eget placerat.
-                        </p>
-                    </div>
-
-                    <hr/>
-
-                    <button type="button" class="btn" id="likeBtn">
-                        <span class="fa fa-heart" aria-hidden="true"></span>
-                        Like
-                    </button>
-
-                    <button class="btn fbBtn">
-                        <span class="fa fa-facebook"></span>
-                    </button>
-
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="block myBoxShadow post">
-                    <!-- Post information -->
-                    <div class="post-info">
-                        <img src="demo-profile-picture.png" alt="" class="postAuthor-img">
-                        <span class="post-time">12 mins</span>
-                        <div class="post__highlight myBoxShadow">
-                            <span class="fa fa-star post__highlight-star" aria-hidden="true"></span>
-                            <h5>Highlight</h5>
-                        </div>
-                        <h4 class="postAuthor-info author-name">Giang</h4>
-                        <h4 class="postAuthor-info author-email">giang@gmail.com</h4>
-                    </div>
-
-                    <hr/>
-
-                    <!-- Post content -->
-                    <div class="post__content__text">
-                        <p>
-                            Sed facilisis, massa et varius varius, sapien massa facilisis neque, in sodales nibh dui nec sapien. 
-                            Curabitur a convallis mauris. Aliquam dui eros, tincidunt id volutpat vestibulum, malesuada ac lacus. 
-                            Suspendisse risus justo, mollis in lacus at, luctus ultrices libero. 
-                            Maecenas justo dui, malesuada ut lacus id, lobortis faucibus ipsum. 
-                            Curabitur libero tortor, suscipit nec lorem nec, cursus ullamcorper mauris. 
-                            Fusce interdum ex non augue luctus, eu vestibulum purus porta. 
-                            Proin mollis commodo metus eget placerat.
-                        </p>
-
-                        <div class="post__content__polaroid">
-                            <img src="demo-profile-picture.png" alt="" 
-                            class="post__content__polaroid__photo">
-                            <div class="post__content__polaroid__caption">
-                                <p>caption</p>
-                            </div>
-                        </div>
-                        
-                        <div class="post__content__polaroid">
-                            <img src="demo-profile-picture.png" alt="" 
-                            class="post__content__polaroid__photo">
-                            <div class="post__content__polaroid__caption">
-                                <p>caption</p>
-                            </div>
+                    <div class="post__content__polaroid">
+                        <img src="demo-profile-picture.png" alt="" class="post__content__polaroid__photo">
+                        <div class="post__content__polaroid__caption">
+                            <p>caption</p>
                         </div>
                     </div>
 
-                    <hr/>
-
-                    <button type="button" class="btn" id="likeBtn">
-                        <span class="fa fa-heart" aria-hidden="true"></span>
-                        Like
-                    </button>
-
-                    <button class="btn fbBtn">
-                        <span class="fa fa-facebook"></span>
-                    </button>
-
+                    <div class="post__content__polaroid">
+                        <img src="demo-profile-picture.png" alt="" class="post__content__polaroid__photo">
+                        <div class="post__content__polaroid__caption">
+                            <p>caption</p>
+                        </div>
+                    </div>
                 </div>
+
+                <hr/>
+
+                <button type="button" class="btn" id="likeBtn">
+                    <span class="fa fa-heart" aria-hidden="true"></span>
+                    Like
+                </button>
+
+                <button class="btn fbBtn">
+                    <span class="fa fa-facebook"></span>
+                </button>
+
             </div>
         </div>
+    </div>
 
-        <!-- End of center section -->
-        
-        <!-- Right sections -->
-        <div class="col-md-2">
-            <div class="row">
-                <div class="block myBoxShadow" id="news">
-                    <h4>What's new?</h4>
-                </div>
+    <!-- End of center section -->
+
+    <!-- Right sections -->
+    <div class="col-md-2">
+        <div class="row">
+            <div class="block myBoxShadow" id="news">
+                <h4>What's new?</h4>
             </div>
         </div>
+    </div>
 
-        <!-- End of right sections -->
+    <!-- End of right sections -->
 
-        <!-- Footer -->
+    <!-- Footer -->
 
-    </body>
+    <!-- End of Web page -->
+</body>
+
 </html>
