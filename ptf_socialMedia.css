@@ -38,7 +38,7 @@ li > *, .navbar-brand {
     font-size: 20px;
 }
 
-#menuLabel {
+#menu-label {
     font-size: 20px;
 }
 
@@ -66,7 +66,8 @@ li:hover, span.myNav:hover {
     background-color: black;
 }
 
-a.navLabel {
+a.nav-label {
+    margin-left: 20px;
     color: white;
     text-decoration: none;
     display: none;
@@ -92,7 +93,7 @@ a.navLabel {
     .handler {
         display: block;
     }
-    a.navLabel {
+    a.nav-label {
         display: inline;
     }
     #myProfile {
@@ -142,7 +143,7 @@ img#profile-img {
     display: block;
 }
 
-.profileHeadline {
+.profile-headline {
     text-align: center;
 }
 
@@ -285,7 +286,7 @@ input#someText {
 }
 
 .postAuthor-info {
-    display: block;
+    /* display: block; */
     box-sizing: border-box;
 }
 
@@ -297,7 +298,7 @@ input#someText {
     color: #acacbe;
     cursor: pointer;
     font-size: 15px;
-    max-width: 400px;
+    /* max-width: 60%; */
 }
 
 .post__content__text {
